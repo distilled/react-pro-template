@@ -1,0 +1,42 @@
+{
+  "outDir": "build",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "resolve": {
+    "extensions": [".ts", ".tsx"]
+  },
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es5",
+    "removeComments": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "strictNullChecks": true,
+    "paths": {
+      "*": ["src/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@core/*": ["src/components/core/*"],
+      "@api": ["src/api"],
+      "@api/*": ["src/api/*"]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "sourceMap": true,
+    "noImplicitAny": false,
+  },
+  "exclude": ["node_modules", "build"],
+  "include": [ "src/**/*", "webpack.config.ts" ]
+}

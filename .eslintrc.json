@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "ignorePatterns": ["src/**/*.test.ts"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { 
+    "project": ["./tsconfig.json"] 
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": "warn",
+    "prettier/prettier": [
+      "error", { "endOfLine": "auto" }
+    ]
+  },
+  "overrides": [
+    { "files": ["*.ts", "*.tsx"]}
+  ]
+}
