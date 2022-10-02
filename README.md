@@ -1,4 +1,4 @@
-# Pro React Template - TypeScript, WebPack, SASS and JEST
+# Pro React Template - TypeScript, WebPack, SASS and Jest
 
 ## Introduction
 
@@ -190,10 +190,16 @@ To configure **Jest** create a file named `jest.config.json` in the projects **r
 }
 ```
 
+**IMPORTANT**: Jest **watch** task needs the project to be an initialized GIT repository to work! It uses GIT to detect changes in the project. You can only run the commmand `
+
 ```bash
 npm install --save-dev babel-preset-es2015
 ```
 
 ```bash
 npm install --save-dev react-scripts-ts --legacay-peer-deps
+```
+
+```bash
+npm install --save-dev @typescript-eslint/parser --legacy-peer-depts
 ```

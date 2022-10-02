@@ -8,9 +8,9 @@ const webpackConfig = (): Configuration => ({
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      '@components': path.resolve(process.cwd(), 'src/components/'),
-      '@core': path.resolve(process.cwd(), 'src/components/core/'),
-      '@api': path.resolve(process.cwd(), 'src/api/')
+      components: path.resolve(process.cwd(), 'src/components/'),
+      core: path.resolve(process.cwd(), 'src/components/core/'),
+      api: path.resolve(process.cwd(), 'src/api/')
     },
     plugins: [
       new TsconfigPathsPlugin({ configFile: path.resolve(process.cwd(), 'tsconfig.json') })

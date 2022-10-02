@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["src/**/*.test.ts"],
+  "ignorePatterns": ["src/**/*.data.ts"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"

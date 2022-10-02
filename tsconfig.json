@@ -10,7 +10,7 @@
   },
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "es5",
+    "target": "es6",
     "removeComments": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -23,11 +23,11 @@
     "strictNullChecks": true,
     "paths": {
       "*": ["src/*"],
-      "@components": ["src/components"],
-      "@components/*": ["src/components/*"],
-      "@core/*": ["src/components/core/*"],
-      "@api": ["src/api"],
-      "@api/*": ["src/api/*"]
+      "components": ["src/components"],
+      "components/*": ["src/components/*"],
+      "core/*": ["src/components/core/*"],
+      "api": ["src/api"],
+      "api/*": ["src/api/*"]
     },
     "lib": [
       "esnext",

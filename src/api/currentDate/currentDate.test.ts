@@ -6,4 +6,8 @@ describe('TestSuite for "currentDate()"', () => {
     const date = currentDate();
     expect(date).toBeTruthy();
   });
+  test('Returns valid Date as [string]', () => {
+    const date = currentDate();
+    expect(date).toEqual(new Date().toLocaleDateString());
+  });
 });
