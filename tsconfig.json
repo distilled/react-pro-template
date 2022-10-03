@@ -1,5 +1,7 @@
 {
   "outDir": "build",
+  "exclude": ["node_modules", "build"],
+  "include": [ "**/*", "../webpack.config.ts" ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
@@ -36,7 +38,5 @@
     ],
     "sourceMap": true,
     "noImplicitAny": false,
-  },
-  "exclude": ["node_modules", "build"],
-  "include": [ "**/*", "../webpack.config.ts" ]
+  }
 }

@@ -6,14 +6,23 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 const webpackConfig = (): Configuration => ({
   entry: './src/index.tsx',
   resolve: {
+    roots: ['src'],
     extensions: ['.ts', '.tsx', '.js'],
+    extensionAlias: {
+      '.js': ['.js', '.ts'],
+      '.cjs': ['.cjs', '.cts'],
+      '.mjs': ['.mjs', '.mts']
+    },
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     alias: {
-      components: path.resolve(process.cwd(), 'src/components/'),
-      core: path.resolve(process.cwd(), 'src/components/core/'),
-      api: path.resolve(process.cwd(), 'src/api/')
+      components: path.resolve(process.cwd(), 'src', 'components'),
+      core: path.resolve(process.cwd(), 'src', 'components', 'core'),
+      api: path.resolve(process.cwd(), 'src', 'api')
     },
     plugins: [
-      new TsconfigPathsPlugin({ configFile: path.resolve(process.cwd(), 'tsconfig.json') })
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(process.cwd(), 'tsconfig.json')
+      })
     ]
   },
   output: {
@@ -23,7 +32,7 @@ const webpackConfig = (): Configuration => ({
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)?$/,
+        test: /\.([cm]?ts|tsx)$/,
         loader: 'ts-loader',
         options: {
           transpileOnly: true
