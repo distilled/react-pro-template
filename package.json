@@ -1,15 +1,17 @@
 {
   "name": "react-pro-template",
+  "author": "@distilled",
   "version": "1.0.0",
   "description": "Working React Project Template with TypeScript, Unit Testing, WebPack and SASS",
   "main": "src/index.tsx",
   "scripts": {
-    "app:start": "webpack-cli serve --mode=development --env development --open --hot",
-    "app:build": "webpack --mode=production --env production --progress",
-    "lint:run": "eslint src/**/*.{ts,tsx}",
-    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
-    "test:run": "npx jest",
-    "test:watch": "npx jest --watchAll"
+    "app-start": "webpack-cli serve --mode=development --env development --open --hot",
+    "app-build": "webpack --mode=production --env production --progress",
+    "lint-run": "eslint src/**/*.{ts,tsx}",
+    "lint-fix": "eslint src/**/*.{ts,tsx} --fix",
+    "test-run": "npx jest",
+    "test-watch": "npx jest --watchAll",
+    "npm-install": "npm install --log-level=error --legacy-peer-deps"
   },
   "keywords": [
     "create-react-app",
@@ -17,7 +19,6 @@
     "webpack",
     "sass"
   ],
-  "author": "@distilled",
   "license": "ISC",
   "dependencies": {
     "fork-ts-checker-webpack-plugin": "^7.2.13",
@@ -49,6 +50,7 @@
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "ts-jest": "^29.0.3",
+    "ts-jest-resolver": "^2.0.0",
     "ts-loader": "^9.4.1",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",

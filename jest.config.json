@@ -2,5 +2,7 @@
   "verbose": true,
   "preset": "ts-jest",
   "testEnvironment": "node",
+  "resolver": "ts-jest-resolver",
+  "modulePaths": ["src"], 
   "roots": ["src"]
 }

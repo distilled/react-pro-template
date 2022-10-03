@@ -11,23 +11,23 @@
   "compilerOptions": {
     "module": "CommonJS",
     "target": "es6",
-    "removeComments": true,
     "moduleResolution": "node",
+    "removeComments": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "allowJs": true,
-    "baseUrl": ".",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "downlevelIteration": true,
     "strictNullChecks": true,
+    "baseUrl": "src",
     "paths": {
-      "*": ["src/*"],
-      "components": ["src/components"],
-      "components/*": ["src/components/*"],
-      "core/*": ["src/components/core/*"],
-      "api": ["src/api"],
-      "api/*": ["src/api/*"]
+      "*": ["*"],
+      "components": ["components"],
+      "components/*": ["components/*"],
+      "core/*": ["components/core/*"],
+      "api": ["api"],
+      "api/*": ["api/*"]
     },
     "lib": [
       "esnext",
@@ -38,5 +38,5 @@
     "noImplicitAny": false,
   },
   "exclude": ["node_modules", "build"],
-  "include": [ "src/**/*", "webpack.config.ts" ]
+  "include": [ "**/*", "../webpack.config.ts" ]
 }
